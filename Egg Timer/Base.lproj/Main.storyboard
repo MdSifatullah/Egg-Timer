@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,93 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Egg_Timer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1yK-3c-kwP" userLabel="top view">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="245.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How Do You Like Youe Eggs?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akq-29-Aat">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="245.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="akq-29-Aat" firstAttribute="top" secondItem="1yK-3c-kwP" secondAttribute="top" id="C6o-vn-jUA"/>
+                                    <constraint firstItem="akq-29-Aat" firstAttribute="leading" secondItem="1yK-3c-kwP" secondAttribute="leading" id="NJ2-wl-hOz"/>
+                                    <constraint firstAttribute="trailing" secondItem="akq-29-Aat" secondAttribute="trailing" id="b6a-Ta-SqE"/>
+                                    <constraint firstAttribute="bottom" secondItem="akq-29-Aat" secondAttribute="bottom" id="szD-15-FcG"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7Ay-hz-gbv">
+                                <rect key="frame" x="0.0" y="245.5" width="414" height="409"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UoE-ri-ZKC">
+                                        <rect key="frame" x="141.5" y="0.0" width="131" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Start Boiling">
+                                            <color key="titleColor" red="0.43855720409999999" green="1" blue="0.41902385860000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="StartBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QPp-F8-sUh"/>
+                                        </connections>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" image="rawEgg" translatesAutoresizingMaskIntoConstraints="NO" id="FFt-r3-y17">
+                                        <rect key="frame" x="0.0" y="42" width="414" height="367"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="nTZ-JO-JJd">
+                                <rect key="frame" x="40" y="684.5" width="334" height="20"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="UyA-jy-a26"/>
+                                </constraints>
+                                <color key="progressTintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kn9-XD-mVZ">
+                                <rect key="frame" x="0.0" y="734.5" width="414" height="117.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.56306042604484663" green="0.5957081419954926" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1yK-3c-kwP" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="0HF-gr-w1d"/>
+                            <constraint firstItem="nTZ-JO-JJd" firstAttribute="top" secondItem="7Ay-hz-gbv" secondAttribute="bottom" constant="30" id="0gs-lV-x4F"/>
+                            <constraint firstItem="7Ay-hz-gbv" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.5" id="4YE-tH-VZu"/>
+                            <constraint firstItem="nTZ-JO-JJd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="4iu-xn-Jip"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kn9-XD-mVZ" secondAttribute="bottom" constant="10" id="7JX-y3-adv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7Ay-hz-gbv" secondAttribute="trailing" id="BsP-hA-dQg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kn9-XD-mVZ" secondAttribute="trailing" id="IyO-ol-EU9"/>
+                            <constraint firstAttribute="trailing" secondItem="1yK-3c-kwP" secondAttribute="trailing" id="QTO-rO-85l"/>
+                            <constraint firstAttribute="trailing" secondItem="nTZ-JO-JJd" secondAttribute="trailing" constant="40" id="VjS-b2-zYb"/>
+                            <constraint firstItem="1yK-3c-kwP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ZZA-kX-zm3"/>
+                            <constraint firstItem="7Ay-hz-gbv" firstAttribute="top" secondItem="1yK-3c-kwP" secondAttribute="bottom" id="cbI-gU-wgF"/>
+                            <constraint firstItem="kn9-XD-mVZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kqj-am-T6O"/>
+                            <constraint firstItem="kn9-XD-mVZ" firstAttribute="top" secondItem="nTZ-JO-JJd" secondAttribute="bottom" constant="30" id="s1T-bM-SBu"/>
+                            <constraint firstItem="1yK-3c-kwP" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.3" id="v8J-Wy-mLD"/>
+                            <constraint firstItem="7Ay-hz-gbv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="y0X-A0-fcC"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="ImageView" destination="FFt-r3-y17" id="NWb-yk-51A"/>
+                        <outlet property="ProgressView" destination="nTZ-JO-JJd" id="On3-Zn-OXR"/>
+                        <outlet property="Showlebel" destination="kn9-XD-mVZ" id="R0B-Mo-tJp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="132" y="139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="rawEgg" width="900" height="900"/>
+    </resources>
 </document>

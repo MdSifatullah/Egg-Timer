@@ -13,6 +13,7 @@
 		0BBC30092398D85000476E94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BBC30072398D85000476E94 /* Main.storyboard */; };
 		0BBC300B2398D85B00476E94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BBC300A2398D85B00476E94 /* Assets.xcassets */; };
 		0BBC300E2398D85B00476E94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BBC300C2398D85B00476E94 /* LaunchScreen.storyboard */; };
+		0BBC30162398F7CC00476E94 /* alarm_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0BBC30152398F7CB00476E94 /* alarm_sound.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		0BBC300A2398D85B00476E94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0BBC300D2398D85B00476E94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0BBC300F2398D85B00476E94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0BBC30152398F7CB00476E94 /* alarm_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm_sound.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		0BBC30002398D85000476E94 /* Egg Timer */ = {
 			isa = PBXGroup;
 			children = (
+				0BBC30152398F7CB00476E94 /* alarm_sound.mp3 */,
 				0BBC30012398D85000476E94 /* AppDelegate.swift */,
 				0BBC30032398D85000476E94 /* SceneDelegate.swift */,
 				0BBC30052398D85000476E94 /* ViewController.swift */,
@@ -127,6 +130,7 @@
 			files = (
 				0BBC300E2398D85B00476E94 /* LaunchScreen.storyboard in Resources */,
 				0BBC300B2398D85B00476E94 /* Assets.xcassets in Resources */,
+				0BBC30162398F7CC00476E94 /* alarm_sound.mp3 in Resources */,
 				0BBC30092398D85000476E94 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
